@@ -28,19 +28,19 @@ The project utilizes a polymorphic **Scene System**, allowing for hot-swapping b
 
 ### Dependencies
 **Arch Linux:**
-\`\`\`bash
+```bash
 sudo pacman -S base-devel cmake glfw-wayland glew
-\`\`\`
+```
 
 **Debian/Ubuntu:**
-\`\`\`bash
+```bash
 sudo apt install build-essential cmake libglfw3-dev libglew-dev
-\`\`\`
+```
 
 ### Compile and Run
 I have included a helper script \`run.sh\` to automate the CMake build process.
 
-\`\`\`bash
+```bash
 # 1. Clone the repository
 git clone git@github.com:YOUR_USERNAME/GraphicsLab.git
 
@@ -49,7 +49,7 @@ cd GraphicsLab
 
 # 3. Build and Launch
 ./run.sh
-\`\`\`
+```
 
 ## 🎮 Controls
 
@@ -68,10 +68,10 @@ This project includes a custom orchestration script, \`lab.sh\`, designed for **
 3.  **Yazi:** File management (Bottom-Right).
 
 To start the dev environment:
-\`\`\`bash
+```bash
 ./lab.sh
-\`\`\`
+```
 
 ---
-*Created by [Your Name]*
+*Created by Hugo Schenegg*
 EOF

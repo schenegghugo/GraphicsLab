@@ -2,7 +2,7 @@
 # lab.sh - The GraphicsLab Workbench Orchestrator
 
 # 1. Go to the project directory
-PROJECT_DIR="$HOME/dev/projects/GraphicsLab"
+PROJECT_DIR="$HOME/Work/projects/GraphicsLab"
 cd "$PROJECT_DIR"
 
 # 2. Launch The "Visualizer" (Runner) - The Master Window
