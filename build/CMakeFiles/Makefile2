@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hugo/dev/projects/GraphicsLab
+CMAKE_SOURCE_DIR = /home/hugo/Work/projects/GraphicsLab
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hugo/dev/projects/GraphicsLab/build
+CMAKE_BINARY_DIR = /home/hugo/Work/projects/GraphicsLab/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -85,14 +85,14 @@ clean: CMakeFiles/GraphicsLab.dir/clean
 CMakeFiles/GraphicsLab.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphicsLab.dir/build.make CMakeFiles/GraphicsLab.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphicsLab.dir/build.make CMakeFiles/GraphicsLab.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/hugo/dev/projects/GraphicsLab/build/CMakeFiles --progress-num=1,2 "Built target GraphicsLab"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/hugo/Work/projects/GraphicsLab/build/CMakeFiles --progress-num=1,2,3 "Built target GraphicsLab"
 .PHONY : CMakeFiles/GraphicsLab.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/GraphicsLab.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hugo/dev/projects/GraphicsLab/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hugo/Work/projects/GraphicsLab/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/GraphicsLab.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hugo/dev/projects/GraphicsLab/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hugo/Work/projects/GraphicsLab/build/CMakeFiles 0
 .PHONY : CMakeFiles/GraphicsLab.dir/rule
 
 # Convenience name for target.
@@ -102,7 +102,7 @@ GraphicsLab: CMakeFiles/GraphicsLab.dir/rule
 # codegen rule for target.
 CMakeFiles/GraphicsLab.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphicsLab.dir/build.make CMakeFiles/GraphicsLab.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/hugo/dev/projects/GraphicsLab/build/CMakeFiles --progress-num=1,2 "Finished codegen for target GraphicsLab"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/hugo/Work/projects/GraphicsLab/build/CMakeFiles --progress-num=1,2,3 "Finished codegen for target GraphicsLab"
 .PHONY : CMakeFiles/GraphicsLab.dir/codegen
 
 # clean rule for target.

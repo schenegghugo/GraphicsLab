@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hugo/dev/projects/GraphicsLab
+CMAKE_SOURCE_DIR = /home/hugo/Work/projects/GraphicsLab
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hugo/dev/projects/GraphicsLab/build
+CMAKE_BINARY_DIR = /home/hugo/Work/projects/GraphicsLab/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/GraphicsLab.dir/depend.make
@@ -72,27 +72,43 @@ include CMakeFiles/GraphicsLab.dir/flags.make
 CMakeFiles/GraphicsLab.dir/codegen:
 .PHONY : CMakeFiles/GraphicsLab.dir/codegen
 
+CMakeFiles/GraphicsLab.dir/src/core/TextRenderer3D.cpp.o: CMakeFiles/GraphicsLab.dir/flags.make
+CMakeFiles/GraphicsLab.dir/src/core/TextRenderer3D.cpp.o: /home/hugo/Work/projects/GraphicsLab/src/core/TextRenderer3D.cpp
+CMakeFiles/GraphicsLab.dir/src/core/TextRenderer3D.cpp.o: CMakeFiles/GraphicsLab.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hugo/Work/projects/GraphicsLab/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/GraphicsLab.dir/src/core/TextRenderer3D.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GraphicsLab.dir/src/core/TextRenderer3D.cpp.o -MF CMakeFiles/GraphicsLab.dir/src/core/TextRenderer3D.cpp.o.d -o CMakeFiles/GraphicsLab.dir/src/core/TextRenderer3D.cpp.o -c /home/hugo/Work/projects/GraphicsLab/src/core/TextRenderer3D.cpp
+
+CMakeFiles/GraphicsLab.dir/src/core/TextRenderer3D.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GraphicsLab.dir/src/core/TextRenderer3D.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hugo/Work/projects/GraphicsLab/src/core/TextRenderer3D.cpp > CMakeFiles/GraphicsLab.dir/src/core/TextRenderer3D.cpp.i
+
+CMakeFiles/GraphicsLab.dir/src/core/TextRenderer3D.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GraphicsLab.dir/src/core/TextRenderer3D.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hugo/Work/projects/GraphicsLab/src/core/TextRenderer3D.cpp -o CMakeFiles/GraphicsLab.dir/src/core/TextRenderer3D.cpp.s
+
 CMakeFiles/GraphicsLab.dir/src/main.cpp.o: CMakeFiles/GraphicsLab.dir/flags.make
-CMakeFiles/GraphicsLab.dir/src/main.cpp.o: /home/hugo/dev/projects/GraphicsLab/src/main.cpp
+CMakeFiles/GraphicsLab.dir/src/main.cpp.o: /home/hugo/Work/projects/GraphicsLab/src/main.cpp
 CMakeFiles/GraphicsLab.dir/src/main.cpp.o: CMakeFiles/GraphicsLab.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hugo/dev/projects/GraphicsLab/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/GraphicsLab.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GraphicsLab.dir/src/main.cpp.o -MF CMakeFiles/GraphicsLab.dir/src/main.cpp.o.d -o CMakeFiles/GraphicsLab.dir/src/main.cpp.o -c /home/hugo/dev/projects/GraphicsLab/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hugo/Work/projects/GraphicsLab/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/GraphicsLab.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GraphicsLab.dir/src/main.cpp.o -MF CMakeFiles/GraphicsLab.dir/src/main.cpp.o.d -o CMakeFiles/GraphicsLab.dir/src/main.cpp.o -c /home/hugo/Work/projects/GraphicsLab/src/main.cpp
 
 CMakeFiles/GraphicsLab.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GraphicsLab.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hugo/dev/projects/GraphicsLab/src/main.cpp > CMakeFiles/GraphicsLab.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hugo/Work/projects/GraphicsLab/src/main.cpp > CMakeFiles/GraphicsLab.dir/src/main.cpp.i
 
 CMakeFiles/GraphicsLab.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GraphicsLab.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hugo/dev/projects/GraphicsLab/src/main.cpp -o CMakeFiles/GraphicsLab.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hugo/Work/projects/GraphicsLab/src/main.cpp -o CMakeFiles/GraphicsLab.dir/src/main.cpp.s
 
 # Object files for target GraphicsLab
 GraphicsLab_OBJECTS = \
+"CMakeFiles/GraphicsLab.dir/src/core/TextRenderer3D.cpp.o" \
 "CMakeFiles/GraphicsLab.dir/src/main.cpp.o"
 
 # External object files for target GraphicsLab
 GraphicsLab_EXTERNAL_OBJECTS =
 
+GraphicsLab: CMakeFiles/GraphicsLab.dir/src/core/TextRenderer3D.cpp.o
 GraphicsLab: CMakeFiles/GraphicsLab.dir/src/main.cpp.o
 GraphicsLab: CMakeFiles/GraphicsLab.dir/build.make
 GraphicsLab: CMakeFiles/GraphicsLab.dir/compiler_depend.ts
@@ -100,7 +116,7 @@ GraphicsLab: /usr/lib/libGLEW.so
 GraphicsLab: /usr/lib/libglfw.so.3.4
 GraphicsLab: /usr/lib/libGL.so
 GraphicsLab: CMakeFiles/GraphicsLab.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/hugo/dev/projects/GraphicsLab/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable GraphicsLab"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/hugo/Work/projects/GraphicsLab/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable GraphicsLab"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GraphicsLab.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -112,6 +128,6 @@ CMakeFiles/GraphicsLab.dir/clean:
 .PHONY : CMakeFiles/GraphicsLab.dir/clean
 
 CMakeFiles/GraphicsLab.dir/depend:
-	cd /home/hugo/dev/projects/GraphicsLab/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hugo/dev/projects/GraphicsLab /home/hugo/dev/projects/GraphicsLab /home/hugo/dev/projects/GraphicsLab/build /home/hugo/dev/projects/GraphicsLab/build /home/hugo/dev/projects/GraphicsLab/build/CMakeFiles/GraphicsLab.dir/DependInfo.cmake "--color=$(COLOR)" GraphicsLab
+	cd /home/hugo/Work/projects/GraphicsLab/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hugo/Work/projects/GraphicsLab /home/hugo/Work/projects/GraphicsLab /home/hugo/Work/projects/GraphicsLab/build /home/hugo/Work/projects/GraphicsLab/build /home/hugo/Work/projects/GraphicsLab/build/CMakeFiles/GraphicsLab.dir/DependInfo.cmake "--color=$(COLOR)" GraphicsLab
 .PHONY : CMakeFiles/GraphicsLab.dir/depend
 

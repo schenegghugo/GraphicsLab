@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/GraphicsLab.dir/link.d"
+  "CMakeFiles/GraphicsLab.dir/src/core/TextRenderer3D.cpp.o"
+  "CMakeFiles/GraphicsLab.dir/src/core/TextRenderer3D.cpp.o.d"
   "CMakeFiles/GraphicsLab.dir/src/main.cpp.o"
   "CMakeFiles/GraphicsLab.dir/src/main.cpp.o.d"
   "GraphicsLab"

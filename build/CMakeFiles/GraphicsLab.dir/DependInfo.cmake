@@ -8,7 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/hugo/dev/projects/GraphicsLab/src/main.cpp" "CMakeFiles/GraphicsLab.dir/src/main.cpp.o" "gcc" "CMakeFiles/GraphicsLab.dir/src/main.cpp.o.d"
+  "/home/hugo/Work/projects/GraphicsLab/src/core/TextRenderer3D.cpp" "CMakeFiles/GraphicsLab.dir/src/core/TextRenderer3D.cpp.o" "gcc" "CMakeFiles/GraphicsLab.dir/src/core/TextRenderer3D.cpp.o.d"
+  "/home/hugo/Work/projects/GraphicsLab/src/main.cpp" "CMakeFiles/GraphicsLab.dir/src/main.cpp.o" "gcc" "CMakeFiles/GraphicsLab.dir/src/main.cpp.o.d"
   "" "GraphicsLab" "gcc" "CMakeFiles/GraphicsLab.dir/link.d"
   )
 

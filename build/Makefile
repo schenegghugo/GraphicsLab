@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hugo/dev/projects/GraphicsLab
+CMAKE_SOURCE_DIR = /home/hugo/Work/projects/GraphicsLab
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hugo/dev/projects/GraphicsLab/build
+CMAKE_BINARY_DIR = /home/hugo/Work/projects/GraphicsLab/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hugo/dev/projects/GraphicsLab/build/CMakeFiles /home/hugo/dev/projects/GraphicsLab/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hugo/Work/projects/GraphicsLab/build/CMakeFiles /home/hugo/Work/projects/GraphicsLab/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hugo/dev/projects/GraphicsLab/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hugo/Work/projects/GraphicsLab/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -129,6 +129,30 @@ GraphicsLab/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphicsLab.dir/build.make CMakeFiles/GraphicsLab.dir/build
 .PHONY : GraphicsLab/fast
 
+src/core/TextRenderer3D.o: src/core/TextRenderer3D.cpp.o
+.PHONY : src/core/TextRenderer3D.o
+
+# target to build an object file
+src/core/TextRenderer3D.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphicsLab.dir/build.make CMakeFiles/GraphicsLab.dir/src/core/TextRenderer3D.cpp.o
+.PHONY : src/core/TextRenderer3D.cpp.o
+
+src/core/TextRenderer3D.i: src/core/TextRenderer3D.cpp.i
+.PHONY : src/core/TextRenderer3D.i
+
+# target to preprocess a source file
+src/core/TextRenderer3D.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphicsLab.dir/build.make CMakeFiles/GraphicsLab.dir/src/core/TextRenderer3D.cpp.i
+.PHONY : src/core/TextRenderer3D.cpp.i
+
+src/core/TextRenderer3D.s: src/core/TextRenderer3D.cpp.s
+.PHONY : src/core/TextRenderer3D.s
+
+# target to generate assembly for a file
+src/core/TextRenderer3D.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphicsLab.dir/build.make CMakeFiles/GraphicsLab.dir/src/core/TextRenderer3D.cpp.s
+.PHONY : src/core/TextRenderer3D.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -162,6 +186,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... GraphicsLab"
+	@echo "... src/core/TextRenderer3D.o"
+	@echo "... src/core/TextRenderer3D.i"
+	@echo "... src/core/TextRenderer3D.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

@@ -1,7 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"/home/hugo/dev/projects/GraphicsLab/build/cmake_install.cmake"
+		"/home/hugo/Work/projects/GraphicsLab/build/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

@@ -12,9 +12,7 @@ public:
     }
 
     void OnUpdate(float deltaTime) override {
-        // We don't need manual logic updates here 
-        // because we will poll the mouse directly during render
-        // for maximum responsiveness.
+        // No manual update needed, we poll in Render
     }
 
     void OnRender() override {
@@ -24,34 +22,62 @@ public:
         double mouseX, mouseY;
         glfwGetCursorPos(window, &mouseX, &mouseY);
 
-        // 2. Get Window Size (in case you resized it)
+        // 2. Get Window Size
         int width, height;
         glfwGetWindowSize(window, &width, &height);
 
-        // --- THE GRAPHICS TRAP ---
+        // --- COORDINATE FIX ---
         // GLFW (Window System): (0,0) is TOP-Left.
         // OpenGL (Rendering):   (0,0) is BOTTOM-Left.
-        // We must flip the Y axis!
+        // We calculate glMouseY to match OpenGL coordinates.
         int glMouseY = height - (int)mouseY;
 
-        // 3. Clear Background (Dark Blue-ish)
-        // We change background based on X position!
-        float bgBlue = (float)mouseX / width; 
-        glClearColor(0.1f, 0.1f, bgBlue, 1.0f);
+        // Calculate a 0.0 to 1.0 ratio based on height
+        // 1.0 = Top (Day), 0.0 = Bottom (Night)
+        float heightRatio = (float)glMouseY / height;
+        // Clamp ratio to 0-1 just in case mouse goes off screen
+        if (heightRatio < 0.0f) heightRatio = 0.0f;
+        if (heightRatio > 1.0f) heightRatio = 1.0f;
+
+        // 3. Clear Background
+        // Blue when high (Top), Dark when low (Bottom)
+        glClearColor(0.1f, 0.1f, heightRatio, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
-        // 4. Calculate Pulsing Size
-        float time = (float)glfwGetTime();
-        // sin goes -1 to 1. We want size 50 to 150.
-        int boxSize = (int)((sin(time * 5.0f) * 50.0f) + 100.0f);
-
-        // 5. Draw the Box centered on Mouse
         glEnable(GL_SCISSOR_TEST);
+
+        // --- FEATURE: STARS ---
+        // If we are in the bottom half of the screen (Dark/Night)
+        if (heightRatio < 0.5f) 
+        {
+            // Set star color to White
+            glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
+
+            // Draw 20 fixed stars
+            for (int i = 0; i < 20; i++) {
+                // Pseudo-random math using 'i' so stars don't flicker
+                int starX = (i * 137) % width;           
+                // Keep stars in the top 200 pixels of the screen (OpenGL Y is bottom-up, so height - offset)
+                int starY = height - 10 - ((i * 53) % 200); 
+                
+                // Draw a tiny 2x2 box for each star
+                glScissor(starX, starY, 2, 2); 
+                glClear(GL_COLOR_BUFFER_BIT);
+            }
+        }
+
+        // 4. Calculate Box Size based on Y Axis
+        // Logic: When cursor is Top (Ratio 1.0) -> Size 150
+        //        When cursor is Bottom (Ratio 0.0) -> Size 20
+        float maxSize = 150.0f;
+        float minSize = 0.0f;
         
-        // (X, Y, Width, Height) -> We offset X and Y by half size to center it
+        // Linear Interpolation: Size grows as ratio grows
+        int boxSize = (int)(minSize + (maxSize - minSize) * heightRatio);
+
+        // 5. Draw the Gold Box centered on Mouse
         glScissor((int)mouseX - (boxSize/2), glMouseY - (boxSize/2), boxSize, boxSize);
         
-        // Box Color (Inverted from background)
         glClearColor(1.0f, 0.8f, 0.2f, 1.0f); // Gold color
         glClear(GL_COLOR_BUFFER_BIT);
 

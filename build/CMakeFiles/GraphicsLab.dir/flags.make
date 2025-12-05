@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/hugo/dev/projects/GraphicsLab/src
+CXX_INCLUDES = -I/home/hugo/Work/projects/GraphicsLab/src -I/home/hugo/Work/projects/GraphicsLab/src/libs
 
 CXX_FLAGS = -std=gnu++17
 

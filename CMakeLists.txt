@@ -13,6 +13,7 @@ find_package(glm REQUIRED)
 include_directories(${OPENGL_INCLUDE_DIR})
 include_directories(${GLEW_INCLUDE_DIRS})
 include_directories(src)
+include_directories(src/libs)
 
 # Source Files
 file(GLOB_RECURSE SOURCES "src/*.cpp")
@@ -26,3 +27,5 @@ target_link_libraries(GraphicsLab
     glfw
     OpenGL::GL
 )
+
+
